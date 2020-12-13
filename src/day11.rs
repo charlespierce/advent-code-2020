@@ -212,31 +212,3 @@ pub fn solve_part2(input: &Lobby) -> usize {
         current = next_step;
     }
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    const DATA: &str = "L.LL.LL.LL
-LLLLLLL.LL
-L.L.L..L..
-LLLL.LL.LL
-L.LL.LL.LL
-L.LLLLL.LL
-..L.L.....
-LLLLLLLLLL
-L.LLLLLL.L
-L.LLLLL.LL";
-
-    #[test]
-    fn test_part1() {
-        let lobby = parser(DATA);
-        assert_eq!(solve_part1(&lobby), 37);
-    }
-
-    #[test]
-    fn test_part2() {
-        let lobby = parser(DATA);
-        assert_eq!(solve_part2(&lobby), 26);
-    }
-}
